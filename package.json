@@ -1,0 +1,10 @@
+{
+  "name": "smartplug-test",
+  "version": "1.0.2",
+  "description": "etekcity-api",
+  "main": "app.js",
+  "dependencies": {
+    "hyper-request": "0.1.17",
+    "form-data": "^2.3.1"
+  }
+}

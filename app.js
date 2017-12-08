@@ -3,9 +3,15 @@ let Client = require('./client');
 let config = require('./config.json');
 let client = new Client();
 
+console.log(config.username);
+console.log(config.password);
+console.log(config.deviceName);
+
 client.login(config.username, config.password).then( () => {
+    console.log("ok");
     return client.getDevices();
 }).then( devices => {
+    console.log("ok2");
     return devices.find( (device) => { return device.name.includes(config.deviceName); });
 }).then( device => {
     console.log(`getting data for ${device.id}`);
